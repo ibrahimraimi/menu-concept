@@ -1,0 +1,147 @@
+.nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 40;
+
+  .nav__wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 9.6rem;
+
+    span {
+      font-size: 2rem;
+      cursor: pointer;
+      color: $alternate-col;
+    }
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 3.2rem;
+  grid-template-areas: "l1 l2 c r1 r2";
+}
+
+.menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 30;
+
+  .menu__wrapper {
+    position: relative;
+  }
+
+  .menu__frame {
+    position: relative;
+    padding: 15rem 9.6rem 3.2rem 9.6rem;
+    background-color: $primary-col;
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.15);
+  }
+
+  .menu__pages {
+    display: flex;
+    gap: 8rem;
+  }
+
+  .menu__pages:nth-child(1) {
+    grid-area: 1 / l1 / 1 / l2;
+  }
+
+  .menu__pages:nth-child(2) {
+    grid-area: 1 / c / 1 / r1;
+  }
+
+  .menu__pages:nth-child(3) {
+    grid-area: r2;
+  }
+
+  .menu__pages__title {
+    color: $alternate-col;
+  }
+
+  .menu__pages__title p {
+    font-size: 1.6rem;
+  }
+
+  .menu__pages__links .ofh a {
+    font-size: 2.5rem;
+    line-height: 1.5;
+  }
+
+  .menu__pages__links__more {
+    padding-top: 3.2rem;
+
+    span {
+      font-size: 2rem;
+    }
+  }
+
+  .menu__pages:nth-child(3) .menu__pages__links a,
+  .menu__pages:nth-child(3) .menu__pages__links span {
+    font-size: 2.4rem;
+    line-height: 1.5;
+  }
+
+  .menu__subframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: -11.4rem;
+    width: 100%;
+    padding-top: 3.2rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 3.2rem 9.6rem;
+
+    background-color: $tertiary-col;
+    color: $secondary-col;
+    box-shadow: 0px 6px 32px rgba(0, 0, 0, 0.25);
+
+    z-index: -10;
+  }
+
+  .menu__subframe__item span {
+    font-size: 1.6rem;
+  }
+
+  .ofh {
+    overflow: hidden;
+  }
+}
+
+.hero {
+  position: relative;
+
+  .hero__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 4rem;
+    width: 100%;
+    height: 100vh;
+    margin-top: 40rem;
+    padding: 0 9.6rem;
+
+    span {
+      font-size: 2.4rem;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: 17rem;
+      text-transform: uppercase;
+    }
+  }
+}
+
+@media screen and (max-width: 540px) {
+}
